@@ -11,6 +11,7 @@ CURRENT_DIR=$(dirname -- "$0")
 CORE_LIST="24-47"
 export GOMP_CPU_AFFINITY="24-47"
 
+cp ~/switch-cuda.sh . 
 . switch-cuda.sh "${CUDA_VERSION}"
 nvcc --version
 # run mnist
