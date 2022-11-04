@@ -8,10 +8,12 @@ PYTORCH_VERSION="$3"
 PYTORCH_CHANNEL="$4"
 WORK_DIR="$5"
 
-GPU_FREQUENCY="5001,900"
+#GPU_FREQUENCY="5001,900"
+GPU_FREQUENCY="1215,1410"
 # get the directory of the current script
 CURRENT_DIR=$(dirname -- "$0")
 
+cp ~/switch-cuda.sh . 
 . switch-cuda.sh ${CUDA_VERSION}
 # re-setup the cuda soft link
 if [ -e "/usr/local/cuda" ]; then
